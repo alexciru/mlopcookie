@@ -42,6 +42,7 @@ def main(input_filepath, output_filepath):
         img_normalized = transform_norm(image)
         train_images[idx] = img_normalized
 
+
     torch.save(train_images, f"{output_filepath}/images.pt")
     torch.save(train_labels, f"{output_filepath}/labels.pt")
 
