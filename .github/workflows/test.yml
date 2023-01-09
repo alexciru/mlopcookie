@@ -31,3 +31,9 @@ jobs:
       run: |
         pip install pytest
         pytest -v
+    # dvc
+    - uses: iterative/setup-dvc@v1
+    - name: Get data
+      run: dvc pull
+      env:
+        GDRIVE_CREDENTIALS_DATA: $
