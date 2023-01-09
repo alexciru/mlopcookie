@@ -27,13 +27,15 @@ jobs:
         pip install -r requirements.txt
         pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
         pip install -r requirements_tests.txt
-    - name: Test with pytest
-      run: |
-        pip install pytest
-        pytest -v
     # dvc
     - uses: iterative/setup-dvc@v1
     - name: Get data
       run: dvc pull
       env:
-        GDRIVE_CREDENTIALS_DATA: $
+        GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+
+    - name: Test with pytest
+      run: |
+        pip install pytest
+        pytest -v
+    
