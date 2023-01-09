@@ -14,7 +14,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Cache node modules
       id: cache-npm
       uses: actions/cache@v3
@@ -32,7 +31,6 @@ jobs:
       - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         name: List the state of node modules
         continue-on-err
-        
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
