@@ -22,7 +22,7 @@ def test_load_test_data():
     test_images, test_labels = mlops_cc.models.predict_model.get_data( _PATH_DATA + "\\raw\\test.npz")
     assert len(test_images) == len(test_labels) == 5000 , "Test size have an incorrect number of entries"
 
-
+ 
 
 @pytest.mark.skipif(not os.path.exists("data/processed/images.pt"), reason="Data files not found")
 @pytest.mark.skipif(not os.path.exists("data/processed/labels.pt"), reason="Data files not found")
