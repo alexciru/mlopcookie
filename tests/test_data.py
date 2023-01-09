@@ -24,8 +24,6 @@ def test_load_test_data():
 
 
 
-@pytest.mark.skipif(not os.path.exists("data/processed/images.pt"), reason="Data files not found")
-@pytest.mark.skipif(not os.path.exists("data/processed/labels.pt"), reason="Data files not found")
 def test_load_data_shape():
     """Check whether we have the correct shape format"""
     images = torch.load("data/processed/images.pt")
