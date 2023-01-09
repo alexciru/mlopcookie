@@ -26,6 +26,8 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+    - name: Install NPM dependencies
+      run: npm install
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
