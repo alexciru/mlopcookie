@@ -4,3 +4,5 @@
     url = gdrive://1hawaVLCoM0gpvPAspXGRGZV-LwSCf2By
 ['remote "remote_storage"']
     url = gs://mlopsexample-bucket/
+['remote "myremote"']
+    url = ../mlopsexample-bucket
